@@ -1,8 +1,14 @@
+const express = require("express");
 const pa11y = require("pa11y");
+const PORT = process.env.PORT || 5000;
 
-async function run() {
-  const response = await pa11y("https://www.google.com/");
-  console.log(response);
-}
+const app = express();
 
-run();
+app.get("/api/test", (req, res) => {
+  if (!req.query.url) {
+    res.status(400).json({ error: "url is required" });
+  } else {
+  }
+});
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
