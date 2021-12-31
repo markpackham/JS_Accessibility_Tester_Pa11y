@@ -15,8 +15,29 @@
     <title>Accessibility Tester Pa11y</title>
 </head>
 <body>
-    <h1>Accessibility Tester Pa11y</h1>
-    <p>Mark sure "npm start" is run first.</p>
+    <div class="container-sm">
+        <div class="card my-5 p-3 bg-dark text-light">
+            <div class="card-body">
+                <h1>Accessibility Tester Pa11y</h1>
+                <p class="mb-3">Make sure "npm start" is run first.</p>
+                <form id="form">
+                    <div class="input-group mb-3">
+                        <input type="url" id="url" class="form-control" placeholder="Enter a website to test">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="loader text-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <div id="issues"></div>
+    </div>
+
     <script defer src="js/main.js"></script>
 </body>
 </html>
