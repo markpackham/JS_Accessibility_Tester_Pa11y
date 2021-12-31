@@ -8,6 +8,8 @@ const app = express();
 // run "npm start" then he's a url that can be queried
 // http://localhost:5000/api/test?url=https://www.google.com/
 
+// if things are normal the site should be visited from here
+// http://localhost:5000/
 app.use(express.static("public"));
 
 app.get("/api/test", async (req, res) => {
