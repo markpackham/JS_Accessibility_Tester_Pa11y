@@ -5,7 +5,8 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 // structure of a query if I wanted to test the accessability of Google
-// http://localhost:5000/api/test?https://www.google.com/
+// run "npm start" then he's a url that can be queried
+// http://localhost:5000/api/test?url=https://www.google.com/
 
 app.use(express.static("public"));
 
